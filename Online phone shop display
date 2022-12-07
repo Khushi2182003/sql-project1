@@ -1,0 +1,55 @@
+create table phone_detail 
+(name varchar(100), 
+description varchar(255), 
+availability char(35), 
+price decimal(6,2), 
+in_stock bigint,
+rating decimal(4,1));
+mysql> desc phone_detail;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| name         | varchar(200) | YES  |     | NULL    |       |
+| description  | varchar(100) | YES  |     | NULL    |       |
+| availability | char(35)     | YES  |     | NULL    |       |
+| price        | decimal(6,2) | YES  |     | NULL    |       |
+| in_stock     | bigint       | YES  |     | NULL    |       |
+| rating       | decimal(4,1) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+6 rows in set (0.03 sec)
+
+mysql> select* from phone_detail;
++-------------+---------------------------------------------+--------------+---------+----------+--------+
+| name        | description                                 | availability | price   | in_stock | rating |
++-------------+---------------------------------------------+--------------+---------+----------+--------+
+| Samsung A10 | 8mp Camera & Voice Recording                | y            | 9666.20 |       10 |    5.0 |
+| realme X3   | 64GB memory & wifi Calling                  | y            | 5666.20 |        5 |    4.3 |
+| One plus    | 128GB memory, wifi Calling, Voice Recording | y            | 9666.20 |        2 |    4.5 |
+| Sony 9X     | 28GB memory, wifi Calling, Voice Recording  | y            | 4666.20 |       10 |    5.0 |
++-------------+---------------------------------------------+--------------+---------+----------+--------+
+4 rows in set (0.03 sec)
+
+mysql>  select name from phone_detail;
++-------------+
+| name        |
++-------------+
+| Samsung A10 |
+| realme X3   |
+| One plus    |
+| Sony 9X     |
++-------------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql> select description, price, in_stock, rating from phone_detail;
++---------------------------------------------+---------+----------+--------+
+| description                                 | price   | in_stock | rating |
++---------------------------------------------+---------+----------+--------+
+| 8mp Camera & Voice Recording                | 9666.20 |       10 |    5.0 |
+| 64GB memory & wifi Calling                  | 5666.20 |        5 |    4.3 |
+| 128GB memory, wifi Calling, Voice Recording | 9666.20 |        2 |    4.5 |
+| 28GB memory, wifi Calling, Voice Recording  | 4666.20 |       10 |    5.0 |
++---------------------------------------------+---------+----------+--------+
+4 rows in set (0.00 sec)
+
+mysql>
